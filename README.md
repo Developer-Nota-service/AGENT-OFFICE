@@ -1,29 +1,29 @@
 # Agent Office
 
-Prototipe web responsif berbahasa Indonesia untuk menjelajahi kantor virtual tim AI. Versi ini memakai pendekatan **kantor isometrik interaktif**: tiap area kantor digambar sebagai ilustrasi vektor 2.5D langsung di browser, dan karakter agent ditampilkan di ruangan masing-masing. Terinspirasi konsep visualisasi kantor agent dari [Claude-Office](https://github.com/W17ant/Claude-Office), tetapi implementasinya dibuat mandiri.
+Prototipe kantor virtual pixel-art berbahasa Indonesia. Arah visual kini mengikuti **format visualisasi kantor game/pixel-art** yang menjadi ciri Claude-Office, bukan ilustrasi bangunan 3D berbentuk kartu atau denah SVG isometrik.
 
 ## Jalankan
 
-Tidak membutuhkan proses build ataupun dependency. Buka `index.html` langsung, atau jalankan server lokal:
+Tidak perlu proses build atau dependency. Buka `index.html` langsung, atau jalankan server lokal:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Kemudian buka http://localhost:8000.
+Buka http://localhost:8000.
 
-## Yang bisa dicoba
+## Yang tersedia
 
-- Klik ruangan pada denah isometrik untuk memilih area dan melihat agent di sana.
-- Klik agent untuk membuka profil, lalu berikan tugas demo.
-- Tambahkan agent baru dan pilih ruangan penugasannya.
-- Pantau hitungan agent, status, daftar aktivitas, dan isi ruangan.
-- Gunakan pada desktop maupun ponsel; pada layar kecil denah dapat digeser horizontal.
+- Canvas pixel-art dengan ruangan kantor dan furnitur yang digambar secara original di browser.
+- Pilih kantor utama, ruangan bos, keuangan, meeting, diskusi, konten, pengembangan website, API, cafe, pantry, taman, kolam renang, atau parkiran.
+- Karakter pixel-art punya tampilan berbeda, gerak idle/mengetik sederhana, dan dapat diklik untuk membuka detail serta memberi tugas demo.
+- Mode siang/malam, zoom, status ringkas, panel obrolan demo, dan aktivitas.
+- Layout responsif untuk desktop dan layar ponsel.
 
-## Ruangan
+## Catatan lisensi dan aset
 
-Ruangan Bos, Divisi Keuangan, Ruang Meeting, Ruang Diskusi Agent, Divisi Konten, Pengembangan Website, Divisi API, Cafe, Pantry & Istirahat, Taman, Kolam Renang, dan Parkiran.
+Karya ini menggunakan ilustrasi pixel-art yang digambar sendiri dengan canvas; sprite dan aset visual dari Claude-Office tidak disalin. Kodenya juga tidak menyalin implementasi aplikasi tersebut. Gambar kantor dan karakter yang dilampirkan dalam percakapan belum tersedia di repo sebagai file aset sehingga belum bisa dipasang. Untuk menggunakan karakter persis dari gambar Anda, tambahkan gambar sebagai aset repo.
 
-## Catatan
+## Batasan prototipe
 
-Ilustrasi kantor dan karakter pada prototipe ini digambar dengan SVG, bentuk CSS, serta emoji. Gambar referensi yang dikirim di percakapan tidak tersedia sebagai berkas yang dapat disalin ke repositori pada sesi ini, jadi belum disematkan sebagai aset asli. Perubahan data agent dan tugas hanya berlaku sementara selama halaman terbuka. Status serta aktivitas masih berupa demo—integrasi dengan model AI, backend persisten, atau pembaruan real-time belum termasuk.
+Status agent, percakapan, gerakan, dan aktivitas masih simulasi frontend. Belum ada koneksi ke Claude Code, model AI, backend, WebSocket, persistensi data, atau autentikasi. Tombol suara hanya memberi umpan balik demo, belum memutar audio.
