@@ -1,29 +1,29 @@
 # Agent Office
 
-Dashboard web responsif berbahasa Indonesia untuk memvisualisasikan tim AI di kantor virtual. Terinspirasi oleh konsep kantor agent real-time dari [Claude-Office](https://github.com/W17ant/Claude-Office), dengan tata ruang yang mengikuti referensi kantor pada permintaan: ruang bos, keuangan, meeting, diskusi, konten, pengembangan website, API, cafe, pantry, taman, kolam renang, dan parkiran.
+Prototipe web responsif berbahasa Indonesia untuk menjelajahi kantor virtual tim AI. Versi ini memakai pendekatan **kantor isometrik interaktif**: tiap area kantor digambar sebagai ilustrasi vektor 2.5D langsung di browser, dan karakter agent ditampilkan di ruangan masing-masing. Terinspirasi konsep visualisasi kantor agent dari [Claude-Office](https://github.com/W17ant/Claude-Office), tetapi implementasinya dibuat mandiri.
 
 ## Jalankan
 
-Aplikasi ini berupa situs statis tanpa proses build atau dependency. Buka `index.html` langsung di browser, atau jalankan server lokal sederhana:
+Tidak membutuhkan proses build ataupun dependency. Buka `index.html` langsung, atau jalankan server lokal:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Lalu buka http://localhost:8000.
+Kemudian buka http://localhost:8000.
 
-## Fitur demo
+## Yang bisa dicoba
 
-- Denah kantor interaktif: pilih ruangan untuk melihat agent yang ada di sana.
-- Ringkasan jumlah agent, agent yang bekerja, tugas selesai, dan ruangan aktif.
-- Daftar dan profil agent, pencarian, serta filter agent aktif.
-- Tambah agent dan berikan tugas melalui dialog demo. Perubahan hanya tersimpan sementara di browser dan akan kembali ke data awal saat halaman dimuat ulang.
-- Tampilan responsif untuk desktop dan ponsel.
+- Klik ruangan pada denah isometrik untuk memilih area dan melihat agent di sana.
+- Klik agent untuk membuka profil, lalu berikan tugas demo.
+- Tambahkan agent baru dan pilih ruangan penugasannya.
+- Pantau hitungan agent, status, daftar aktivitas, dan isi ruangan.
+- Gunakan pada desktop maupun ponsel; pada layar kecil denah dapat digeser horizontal.
 
-## Tentang gambar referensi
+## Ruangan
 
-Gambar yang dikirim di percakapan tidak tersedia sebagai berkas yang dapat disalin oleh alat GitHub pada sesi ini, jadi keduanya belum disematkan sebagai aset repo. Denah interaktif dan avatar pada versi awal ini dibuat langsung dengan HTML/CSS/emoji, mengikuti susunan ruangan dan karakter dari referensi. Jika ingin menggunakan gambar asli, tambahkan file gambar ke repo lalu kita dapat memasangnya sebagai ilustrasi denah dan avatar.
+Ruangan Bos, Divisi Keuangan, Ruang Meeting, Ruang Diskusi Agent, Divisi Konten, Pengembangan Website, Divisi API, Cafe, Pantry & Istirahat, Taman, Kolam Renang, dan Parkiran.
 
-## Batasan
+## Catatan
 
-Ini adalah prototipe frontend statis. Status agent dan aktivitas masih berupa data contoh; integrasi AI sungguhan, penyimpanan persisten, autentikasi, dan pembaruan real-time memerlukan backend/API.
+Ilustrasi kantor dan karakter pada prototipe ini digambar dengan SVG, bentuk CSS, serta emoji. Gambar referensi yang dikirim di percakapan tidak tersedia sebagai berkas yang dapat disalin ke repositori pada sesi ini, jadi belum disematkan sebagai aset asli. Perubahan data agent dan tugas hanya berlaku sementara selama halaman terbuka. Status serta aktivitas masih berupa demo—integrasi dengan model AI, backend persisten, atau pembaruan real-time belum termasuk.
